@@ -366,7 +366,7 @@ for (i = 0; i < 2; i++)
         if (errorcode_jit != errorcode)
           {
           if (!(errorcode < 0 && errorcode_jit < 0) &&
-                errorcode != PCRE2_ERROR_MATCHLIMIT && errorcode != PCRE2_ERROR_CALLOUT && && errorcode != PCRE2_ERROR_RECURSELOOP &&
+                errorcode != PCRE2_ERROR_MATCHLIMIT && errorcode != PCRE2_ERROR_CALLOUT && errorcode != PCRE2_ERROR_RECURSELOOP &&
                 errorcode_jit != PCRE2_ERROR_MATCHLIMIT && errorcode_jit != PCRE2_ERROR_JIT_STACKLIMIT && errorcode_jit != PCRE2_ERROR_CALLOUT)
             {
             describe_failure("match errorcode comparison", data, size, compile_options, match_options, errorcode, errorcode_jit, matches, matches_jit, match_data, match_data_jit, match_context);
